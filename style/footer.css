@@ -12,15 +12,15 @@ footer.footer.post {
 	width: 100%;
 }
 @media (max-width: 768px) {
-	.footer {
+	footer.footer {
 		flex-wrap: wrap;
 		flex-direction: column;
 		margin-left: 0;
 	}
-	.footer h3 {
+	footer.footer h3 {
 		font-size: 10px;
 	}
-	.footer p {
+	footer.footer p {
 		font-size: 15px;
 	}
 }
