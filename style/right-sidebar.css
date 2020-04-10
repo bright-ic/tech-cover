@@ -1,0 +1,68 @@
+.right-sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.right-sidebar .small-card .card-detail a {
+  outline: none;
+  text-decoration: none;
+  color: #000000;
+}
+.right-sidebar .popular {
+  margin-bottom: 20px;
+}
+.right-sidebar .small-card {
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b6b2b2;
+}
+
+.right-sidebar .small-card .card-img {
+  width: 60px;
+}
+
+.right-sidebar .small-card .card-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #5c5a5a;
+}
+
+.right-sidebar .small-card .card-detail {
+  flex: 1;
+  padding-left: 8px;
+}
+
+.right-sidebar .small-card .card-detail h4 {
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.right-sidebar .small-card .card-detail .author {
+  color: #8d8c8c;
+  font-size: 12px;
+}
+.right-sidebar .small-card .card-detail .date {
+  color: #b4b2b2;
+  font-size: 11px;
+}
+
+/* media query for sidbar at small screen */
+@media (max-width: 768px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .right-sidebar {
+    display: block;
+    top: 60px;
+  }
+}

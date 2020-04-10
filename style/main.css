@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+
+/* import external css files */
+@import url(./sidebar.css);
+@import url(./footer.css);
+@import url(./blog_post.css);
+@import url(./right-sidebar.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	color: #ffffff;
+	background-color: #ffffff;
+	height: 56px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	line-height: 56px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+		0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 10px;
+	transition: all 0.3s linear;
+	z-index: 2;
+	width: 100%;
+	margin: 0;
+}
+
+.header .hamburger_menu{
+	display: none;
+}
+
+.header .app-title {
+	display: flex;
+	justify-content: center;
+	width: 100%
+}
+.header .app-title h3 {
+	text-align: center;
+	color: #01A7F6;
+}
+
+.header .app-title h3 a{
+	color: #01A7F6;
+}
+
+
+.main {
+	margin-top: 6rem;
+	margin-left: 280px;
+	padding: 20px;
+	display: flex;
+}
+
+.main.post {
+	padding: 20px;
+	display: flex;
+	transition: all 0.3s linear;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-top: 6rem;
+}
+
+.main .post-container {
+	width: 70%;
+	padding-right: 25px;
+}
+
+.main .right-bar-posts {
+	width: 30%;
+}
+
+.main h2 {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+	border-left: 3px solid #182a57;
+	padding-left: 10px;
+}
+
+.blog-posts-container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 10px;
+	margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+	.main {
+		margin-left: 0;
+	}
+	.header {
+		width: 100%;
+	}
+	.main h2 {
+		margin-bottom: 0.5rem;
+	}
+	.blog-posts-container{
+		padding: 5px;
+	}
+	.app-footer {
+		margin-left: 0;
+	}
+	
+	.header .hamburger_menu{
+		outline: none;
+		border: none;
+		height: 100%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	
+	.header .app-title {
+		width: calc(100% - 45px);
+	}
+	
+	.header .hamburger_menu> img {
+		width: 35px;
+		height: 35px;
+		vertical-align: middle;
+	}
+
+}
+
+/* Table size */
+@media (max-width: 848px) {
+	.blog-posts-container{
+		grid-template-columns: repeat(1, 1fr);
+		margin-top: 0;
+		padding: 10px;
+	}
+	.main {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.main .post-container {
+		width: 100%;
+		padding-right: 0;
+	}
+	
+	.main .right-bar-posts {
+		display: none;
+	}
+}
