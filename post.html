@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="app-title">
+    <div class="app-title post">
       <h3><a href="./index.html">Home</a></</h3>
     </div>
   </header>
@@ -38,7 +38,10 @@
          </div>
        </div>
        <article>
-         <img src="./assets/image/react-native-banner.jpg" alt="article cover" class="artcle">
+         <figure>
+            <img src="./assets/image/react-native-banner.jpg" alt="article cover" class="artcle">
+            <figcaption>Fig. 1 - React native for fast and scalable mobile app</figcaption>
+         </figure>
          <div class="content">
             <p>
               The release of the first iPhone in 2007 caused a major disruption in the mobile phone industry, 
@@ -56,18 +59,19 @@
             </p>
             <br>
             <div class="highlight text">
-              <q>
+              <blockquote cite="https://www.oreilly.com/library/view/learning-react-native/9781491929049/ch01.html">
                 React Native is a JavaScript framework for writing real, natively rendering
                  mobile applications for iOS and Android. It’s based on React, Facebook’s JavaScript 
                  library for building user interfaces, but instead of targeting the browser, it targets
                   mobile platforms.
-              </q>
+              </blockquote>
             </div>
            <br>
             <p>
               The initial idea behind the Snipe App was to help gamers find good teammates to play
-               with — a problem that is widespread throughout the world of competitive gaming and Esports — 
-               by revolutionizing the way they do so. No more would gamers need to rely on their luck when 
+               with
+               <p class="italics"> — a problem that is widespread throughout the world of competitive gaming and Esports </p>
+               — by revolutionizing the way they do so. No more would gamers need to rely on their luck when 
                seeking teammates by using in-game matchmaking (where the focus lies on creating fair matches 
                between two opposing groups), spamming Discord servers, or going through forum-based Websites. 
                The alternative we were to offer is matchmaking for teammates, powered by AI (utilizing ML 
@@ -80,27 +84,59 @@
                 in developing mobile apps, at that point, added up to a couple of “Hello World”-esque Android 
                 apps. This, plus the desire to release both on iOS and Android, has made the promise of React 
                 Native very appealing to us.
-                React Native is a Facebook maintained open source toolset (MIT-licensed) that enables 
-                building cross-platform mobile apps (on iOS and Android) in JavaScript (making use of
-                JavaScriptCore, WebKit’s JavaScript engine), based on React with web-like styling and 
-                markup syntaxes similar to CSS and HTML. It has been around since 2015 and is being used 
-                by the likes of Airbnb, Wix, and Discord, making it arguably the most mature and widely 
-                used of the cross-platform apps development solutions (other similar solutions that come 
-                to mind: Native Script, Apache Cordova, Microsoft Xamarin, and the newly released Google Flutter).
-                As we’ve soon discovered, building cross-platforms React Native apps from scratch does 
-                not come without its obstacles, ones that developers doing typical mobile app development
-                seldom need to face.
-                The rest of this post will focus on our development experience with React Native — what we
-                like, what we don’t, and when we recommend using it. It should be noted that we are using
-                  React Native v55 (which is fairly recent but is not the newest).
             </p>
+            <p class="bold">React Native </p>
+            <p>
+              React Native is a Facebook maintained open source toolset (MIT-licensed) that enables 
+              building cross-platform mobile apps (on iOS and Android) in JavaScript (making use of
+              JavaScriptCore, WebKit’s JavaScript engine), based on React with web-like styling and 
+              markup syntaxes similar to CSS and HTML. It has been around since 2015 and is being used 
+              by the likes of Airbnb, Wix, and Discord, making it arguably the most mature and widely 
+              used of the cross-platform apps development solutions (other similar solutions that come 
+              to mind: <span class="underline">Native Script, Apache Cordova, Microsoft Xamarin, and the newly released Google Flutter</span>).
+              As we’ve soon discovered, building cross-platforms React Native apps from scratch does 
+              not come without its obstacles, ones that developers doing typical mobile app development
+              seldom need to face.
+              The rest of this post will focus on our development experience with React Native — what we
+              like, what we don’t, and when we recommend using it. It should be noted that we are using
+                React Native v55 (which is fairly recent but is not the newest).
+            </p>
+            <p class="underline bold">What We Like ABout React Native</p>
+            <p>
+              The fact that React Native actually renders using its host platform’s standard 
+              rendering APIs enables it to stand out from most existing methods of cross-platform
+               application development, like Cordova or Ionic. Existing methods of writing mobile 
+               applications using combinations of JavaScript, HTML, and CSS typically render using webviews. 
+               While this approach can work, it also comes with drawbacks, especially around performance.
+                Additionally, they do not usually have access to the host platform’s set of native UI 
+                elements. When these frameworks do try to mimic native UI elements, the results usually 
+                “feel” just a little off; reverse-engineering all the fine details of things like animations 
+                takes an enormous amount of effort, and they can quickly become out of date.
+            </p>
+            <p>
+              In contrast, React Native actually translates your markup to real, native UI elements, 
+              leveraging existing means of rendering views on whatever platform you are working with. 
+              Additionally, React works separately from the main UI thread, so your application can 
+              maintain high performance without sacrificing capability. The update cycle in React Native 
+              is the same as in React: when props or state change, React Native re-renders the views. 
+              The major difference between React Native and React in the browser is that React Native
+               does this by leveraging the UI libraries of its host platform, rather than using HTML 
+               and CSS markup.
+            </p>
+            <p>
+              For developers accustomed to working on the Web with React, this means you can write
+               mobile apps with the performance and look and feel of a native application, while using 
+               familiar tools. React Native also represents an improvement over normal mobile development
+              in two other areas: the developer experience and cross-platform development potential.
+            </p>
+           
          </div>
        </article>
        <div class="social-share">
         <h5>Like this article? Share:</h5>
-        <a class="btn social facebook">Facebook</a>
-        <a class="btn social twitter">Twitter</a>
-        <a class="btn social linkedin">Linkedin</a>
+        <button class="btn social facebook">Facebook</button>
+        <button class="btn social twitter">Twitter</button>
+        <button class="btn social linkedin">Linkedin</button>
        </div>
       </div>
       <div class="right-bar-posts">

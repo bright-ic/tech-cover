@@ -85,6 +85,7 @@ h3.title {
 	height: auto;
 	border-radius: 50%;
 }
+
 p.bio {
 	color: #918f8f;
 	font-size: 12px;
@@ -104,7 +105,7 @@ article img {
 }
 article .content {
 	margin: 2rem 0 5rem;
-	padding: 0 30px;
+	padding: 0;
 }
 article .content p,
 article .content .text {
@@ -120,10 +121,22 @@ article .content .text {
 	font-style: italic;
 }
 
+.italics {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration:underline;
+}
+
 
 /* social share container */
 .social-share {
-	padding: 0 30px;
+	padding: 0 10px;
 	margin-bottom: 2rem;
 }
 
@@ -156,7 +169,7 @@ article .content .text {
 }
 
 .btn.social {
-	padding: 10px 15px;
+	padding: 0px 15px;
 	font-weight: bold;
 }
 

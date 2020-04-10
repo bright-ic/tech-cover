@@ -53,9 +53,15 @@ a {
 
 .header .app-title {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	padding-left: 260px;
 	width: 100%
 }
+
+.header .app-title.post {
+	padding-left: 5%;
+}
+
 .header .app-title h3 {
 	text-align: center;
 	color: #01A7F6;
@@ -140,6 +146,10 @@ a {
 		width: 35px;
 		height: 35px;
 		vertical-align: middle;
+	}
+
+	.header .app-title {
+		padding-left: 10px;
 	}
 
 }
